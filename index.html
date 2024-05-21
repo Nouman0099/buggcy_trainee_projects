@@ -1,137 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="This is our first Mern Stack Trainee Frontend Website">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="input.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is our first Mern Stack Trainee Frontend Website"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Project</title>
-</head>
-<body class="bg-[#EDF4F6;]">
+  </head>
+  <body class="bg-[#EDF4F6;]">
     <header class="bg-[#FFFFFF] w-full">
-        <div class="flex justify-around items-center">
-            <p class="py-3 text-[28px] font-medium">Quick<span class="text-green-500">Pic</span></p>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a class="text-base font-medium text-[#0A2640]" href="">Home</a></li>
-                    <li><a class="text-base font-medium text-[#0A2640]" href="">About us</a></li>
-                    <li><a class="text-base font-medium text-[#0A2640]" href="">Products</a></li>
-                    <li><a class="text-base font-medium text-[#0A2640]" href="">Services</a></li>
-                    <li><a class="text-base font-medium text-[#0A2640]" href="">Contact us</a></li>
-                </ul>
-            </nav>
-            <div class="flex space-x-4 items-center">
-                <button type="button" class="bg-[#3CDA5F] text-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[10px] py-2 px-5 font-medium text-lg">ShopNow</button>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.6008 3.99974 9.22593 4.36649 8.01273 5.06363C6.79952 5.76077 5.79038 6.76392 5.08603 7.97295C4.38168 9.18199 4.00675 10.5546 3.99868 11.9538C3.9906 13.3531 4.34966 14.7299 5.04001 15.947C5.50662 15.3406 6.10644 14.8496 6.7931 14.512C7.47975 14.1744 8.23485 13.9992 9.00001 14H15C15.7652 13.9992 16.5203 14.1744 17.2069 14.512C17.8936 14.8496 18.4934 15.3406 18.96 15.947C19.6504 14.7299 20.0094 13.3531 20.0013 11.9538C19.9933 10.5546 19.6183 9.18199 18.914 7.97295C18.2096 6.76392 17.2005 5.76077 15.9873 5.06363C14.7741 4.36649 13.3993 3.99974 12 4ZM19.943 18.076C21.28 16.333 22.0032 14.1968 22 12C22 6.477 17.523 2 12 2C6.47701 2 2.00001 6.477 2.00001 12C1.99671 14.1968 2.71992 16.333 4.05701 18.076L4.05201 18.094L4.40701 18.507C5.3449 19.6035 6.5094 20.4836 7.82024 21.0866C9.13109 21.6897 10.5571 22.0013 12 22C14.0273 22.0037 16.0074 21.3879 17.675 20.235C18.3859 19.7438 19.0306 19.163 19.593 18.507L19.948 18.094L19.943 18.076ZM12 6C11.2044 6 10.4413 6.31607 9.87869 6.87868C9.31608 7.44129 9.00001 8.20435 9.00001 9C9.00001 9.79565 9.31608 10.5587 9.87869 11.1213C10.4413 11.6839 11.2044 12 12 12C12.7957 12 13.5587 11.6839 14.1213 11.1213C14.6839 10.5587 15 9.79565 15 9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7957 6 12 6Z" fill="black"/>
-                </svg>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 18C15.89 18 15 18.89 15 20C15 20.5304 15.2107 21.0391 15.5858 21.4142C15.9609 21.7893 16.4696 22 17 22C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20C19 19.4696 18.7893 18.9609 18.4142 18.5858C18.0391 18.2107 17.5304 18 17 18ZM1 2V4H3L6.6 11.59L5.24 14.04C5.09 14.32 5 14.65 5 15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H19V15H7.42C7.3537 15 7.29011 14.9737 7.24322 14.9268C7.19634 14.8799 7.17 14.8163 7.17 14.75C7.17 14.7 7.18 14.66 7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.58 17.3 11.97L20.88 5.5C20.95 5.34 21 5.17 21 5C21 4.73478 20.8946 4.48043 20.7071 4.29289C20.5196 4.10536 20.2652 4 20 4H5.21L4.27 2M7 18C5.89 18 5 18.89 5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22C7.53043 22 8.03914 21.7893 8.41421 21.4142C8.78929 21.0391 9 20.5304 9 20C9 19.4696 8.78929 18.9609 8.41421 18.5858C8.03914 18.2107 7.53043 18 7 18Z" fill="black"/>
-                </svg>        
-            </div>
+      <div class="flex justify-around items-center">
+        <p class="py-3 text-[28px] font-medium">
+          Quick<span class="text-green-500">Pic</span>
+        </p>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a class="text-base font-medium text-[#0A2640]" href="">Home</a>
+            </li>
+            <li>
+              <a class="text-base font-medium text-[#0A2640]" href=""
+                >About us</a
+              >
+            </li>
+            <li>
+              <a class="text-base font-medium text-[#0A2640]" href=""
+                >Products</a
+              >
+            </li>
+            <li>
+              <a class="text-base font-medium text-[#0A2640]" href=""
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="text-base font-medium text-[#0A2640]" href=""
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="flex space-x-4 items-center">
+          <button
+            type="button"
+            class="bg-[#3CDA5F] text-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[10px] py-2 px-5 font-medium text-lg"
+          >
+            ShopNow
+          </button>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 4C10.6008 3.99974 9.22593 4.36649 8.01273 5.06363C6.79952 5.76077 5.79038 6.76392 5.08603 7.97295C4.38168 9.18199 4.00675 10.5546 3.99868 11.9538C3.9906 13.3531 4.34966 14.7299 5.04001 15.947C5.50662 15.3406 6.10644 14.8496 6.7931 14.512C7.47975 14.1744 8.23485 13.9992 9.00001 14H15C15.7652 13.9992 16.5203 14.1744 17.2069 14.512C17.8936 14.8496 18.4934 15.3406 18.96 15.947C19.6504 14.7299 20.0094 13.3531 20.0013 11.9538C19.9933 10.5546 19.6183 9.18199 18.914 7.97295C18.2096 6.76392 17.2005 5.76077 15.9873 5.06363C14.7741 4.36649 13.3993 3.99974 12 4ZM19.943 18.076C21.28 16.333 22.0032 14.1968 22 12C22 6.477 17.523 2 12 2C6.47701 2 2.00001 6.477 2.00001 12C1.99671 14.1968 2.71992 16.333 4.05701 18.076L4.05201 18.094L4.40701 18.507C5.3449 19.6035 6.5094 20.4836 7.82024 21.0866C9.13109 21.6897 10.5571 22.0013 12 22C14.0273 22.0037 16.0074 21.3879 17.675 20.235C18.3859 19.7438 19.0306 19.163 19.593 18.507L19.948 18.094L19.943 18.076ZM12 6C11.2044 6 10.4413 6.31607 9.87869 6.87868C9.31608 7.44129 9.00001 8.20435 9.00001 9C9.00001 9.79565 9.31608 10.5587 9.87869 11.1213C10.4413 11.6839 11.2044 12 12 12C12.7957 12 13.5587 11.6839 14.1213 11.1213C14.6839 10.5587 15 9.79565 15 9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7957 6 12 6Z"
+              fill="black"
+            />
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 18C15.89 18 15 18.89 15 20C15 20.5304 15.2107 21.0391 15.5858 21.4142C15.9609 21.7893 16.4696 22 17 22C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20C19 19.4696 18.7893 18.9609 18.4142 18.5858C18.0391 18.2107 17.5304 18 17 18ZM1 2V4H3L6.6 11.59L5.24 14.04C5.09 14.32 5 14.65 5 15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H19V15H7.42C7.3537 15 7.29011 14.9737 7.24322 14.9268C7.19634 14.8799 7.17 14.8163 7.17 14.75C7.17 14.7 7.18 14.66 7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.58 17.3 11.97L20.88 5.5C20.95 5.34 21 5.17 21 5C21 4.73478 20.8946 4.48043 20.7071 4.29289C20.5196 4.10536 20.2652 4 20 4H5.21L4.27 2M7 18C5.89 18 5 18.89 5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22C7.53043 22 8.03914 21.7893 8.41421 21.4142C8.78929 21.0391 9 20.5304 9 20C9 19.4696 8.78929 18.9609 8.41421 18.5858C8.03914 18.2107 7.53043 18 7 18Z"
+              fill="black"
+            />
+          </svg>
         </div>
+      </div>
     </header>
+
     <section class="flex space-x-3 mt-3 mb-2 ms-32 me-24">
-        <div class="flex items-center justify-center space-x-2 w-[156px] h-[45px] rounded-[45px] bg-[#FFFFFF]">
-            <svg width="14" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_171)">
-                <path d="M11.7885 1.71909H0.991555C0.832446 1.71909 0.679855 1.65592 0.567348 1.54349C0.454842 1.43106 0.391636 1.27856 0.391636 1.11955C0.391636 0.960548 0.454842 0.808054 0.567348 0.695619C0.679855 0.583185 0.832446 0.52002 0.991555 0.52002H11.7885C11.9476 0.52002 12.1002 0.583185 12.2127 0.695619C12.3252 0.808054 12.3884 0.960548 12.3884 1.11955C12.3884 1.27856 12.3252 1.43106 12.2127 1.54349C12.1002 1.65592 11.9476 1.71909 11.7885 1.71909ZM7.79989 4.32633C7.79946 4.16746 7.73612 4.01522 7.62371 3.90287C7.51129 3.79053 7.35895 3.72723 7.19998 3.7268H0.988285C0.829177 3.7268 0.676585 3.78996 0.564079 3.9024C0.451572 4.01483 0.388367 4.16733 0.388367 4.32633C0.388367 4.48534 0.451572 4.63783 0.564079 4.75027C0.676585 4.8627 0.829177 4.92587 0.988285 4.92587H7.19998C7.35895 4.92544 7.51129 4.86213 7.62371 4.74979C7.73612 4.63745 7.79946 4.48521 7.79989 4.32633ZM9.62744 7.51841C9.62701 7.35953 9.56366 7.20729 9.45125 7.09495C9.33884 6.98261 9.1865 6.9193 9.02752 6.91887H0.991555C0.832446 6.91887 0.679855 6.98204 0.567348 7.09447C0.454842 7.20691 0.391636 7.3594 0.391636 7.51841C0.391636 7.67741 0.454842 7.82991 0.567348 7.94234C0.679855 8.05478 0.832446 8.11794 0.991555 8.11794H9.02916C9.18785 8.11708 9.33977 8.05359 9.45183 7.94129C9.56389 7.829 9.62701 7.677 9.62744 7.51841ZM11.8465 10.7105C11.8461 10.5516 11.7827 10.3994 11.6703 10.287C11.5579 10.1747 11.4055 10.1114 11.2466 10.1109H1.03651C0.877399 10.1109 0.724808 10.1741 0.612301 10.2865C0.499795 10.399 0.436589 10.5515 0.436589 10.7105C0.436589 10.8695 0.499795 11.022 0.612301 11.1344C0.724808 11.2469 0.877399 11.31 1.03651 11.31H11.2482C11.4072 11.3096 11.5595 11.2463 11.6719 11.1339C11.7843 11.0216 11.8477 10.8694 11.8481 10.7105H11.8465Z" fill="#184363"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_1_171">
-                <rect width="12" height="10.79" fill="white" transform="translate(0.390015 0.52002)"/>
-                </clipPath>
-                </defs>
-            </svg>    
-            <p class="text-center font-medium text-[#184363] text-[15px]">All Categories</p>    
+      <div
+        class="flex items-center justify-center space-x-2 w-[156px] h-[45px] rounded-[45px] bg-[#FFFFFF]"
+      >
+        <svg
+          width="14"
+          height="12"
+          viewBox="0 0 13 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1_171)">
+            <path
+              d="M11.7885 1.71909H0.991555C0.832446 1.71909 0.679855 1.65592 0.567348 1.54349C0.454842 1.43106 0.391636 1.27856 0.391636 1.11955C0.391636 0.960548 0.454842 0.808054 0.567348 0.695619C0.679855 0.583185 0.832446 0.52002 0.991555 0.52002H11.7885C11.9476 0.52002 12.1002 0.583185 12.2127 0.695619C12.3252 0.808054 12.3884 0.960548 12.3884 1.11955C12.3884 1.27856 12.3252 1.43106 12.2127 1.54349C12.1002 1.65592 11.9476 1.71909 11.7885 1.71909ZM7.79989 4.32633C7.79946 4.16746 7.73612 4.01522 7.62371 3.90287C7.51129 3.79053 7.35895 3.72723 7.19998 3.7268H0.988285C0.829177 3.7268 0.676585 3.78996 0.564079 3.9024C0.451572 4.01483 0.388367 4.16733 0.388367 4.32633C0.388367 4.48534 0.451572 4.63783 0.564079 4.75027C0.676585 4.8627 0.829177 4.92587 0.988285 4.92587H7.19998C7.35895 4.92544 7.51129 4.86213 7.62371 4.74979C7.73612 4.63745 7.79946 4.48521 7.79989 4.32633ZM9.62744 7.51841C9.62701 7.35953 9.56366 7.20729 9.45125 7.09495C9.33884 6.98261 9.1865 6.9193 9.02752 6.91887H0.991555C0.832446 6.91887 0.679855 6.98204 0.567348 7.09447C0.454842 7.20691 0.391636 7.3594 0.391636 7.51841C0.391636 7.67741 0.454842 7.82991 0.567348 7.94234C0.679855 8.05478 0.832446 8.11794 0.991555 8.11794H9.02916C9.18785 8.11708 9.33977 8.05359 9.45183 7.94129C9.56389 7.829 9.62701 7.677 9.62744 7.51841ZM11.8465 10.7105C11.8461 10.5516 11.7827 10.3994 11.6703 10.287C11.5579 10.1747 11.4055 10.1114 11.2466 10.1109H1.03651C0.877399 10.1109 0.724808 10.1741 0.612301 10.2865C0.499795 10.399 0.436589 10.5515 0.436589 10.7105C0.436589 10.8695 0.499795 11.022 0.612301 11.1344C0.724808 11.2469 0.877399 11.31 1.03651 11.31H11.2482C11.4072 11.3096 11.5595 11.2463 11.6719 11.1339C11.7843 11.0216 11.8477 10.8694 11.8481 10.7105H11.8465Z"
+              fill="#184363"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1_171">
+              <rect
+                width="12"
+                height="10.79"
+                fill="white"
+                transform="translate(0.390015 0.52002)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <p class="text-center font-medium text-[#184363] text-[15px]">
+          All Categories
+        </p>
+      </div>
+      <div
+        class="items-center flex ps-3 justify-between w-[985px] h-[47px] rounded-[45px] bg-[#FFFFFF]"
+      >
+        <p class="font-medium text-sm text-[#184363]">
+          What are you looking for?
+        </p>
+        <div
+          class="flex items-center justify-center w-[56px] h-[47px] rounded-tr-[47px] rounded-br-[47px] bg-[#3CDA5F]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
         </div>
-        <div class="items-center flex ps-3 justify-between w-[985px] h-[47px] rounded-[45px] bg-[#FFFFFF]">
-            <p class="font-medium text-sm text-[#184363]">What are you looking for?</p>
-            <div class="flex items-center justify-center w-[56px] h-[47px] rounded-tr-[47px] rounded-br-[47px]  bg-[#3CDA5F]">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  stroke="currentColor" class="w-6 h-6 text-white ">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                  </svg>  
-            </div> 
-        </div>
+      </div>
     </section>
+
     <main>
-        <div class="bg-[#FFFFFF]">
-            <div class="flex justify-evenly">
-                <div class="pt-16 pb-14">
-                    <p class="px-4 flex items-center w-[405px] h-[35px] text-[15px] bg-[#d7ffe0] text-[#0A2640] font-normal rounded-[30px]">30% Off on groceries</p>
-                    <div class="w-[513px] my-2">
-                        <p class="text-7xl text-[#0A2640]">Shop smarter, not harder.<br><span class="text-[#FD273B]">Get it ordered.</span></p>
-                        <p class="text-xl text-[#000000] mt-4">Save time, skip the lines. We've got you covered.</p>
-                        <button type="button" class="bg-[#3CDA5F] text-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[10px] mt-12 py-2 px-5 font-medium text-lg">ShopNow</button>
-                    </div> 
+      <div class="bg-[#FFFFFF]">
+        <div class="flex justify-around">
+          <div class="pt-16 pb-14">
+            <p
+              class="px-4 flex items-center w-[405px] h-[35px] text-[15px] bg-[#d7ffe0] text-[#0A2640] font-normal rounded-[30px]"
+            >
+              30% Off on groceries
+            </p>
+            <div class="w-[513px] my-2">
+              <p class="text-7xl text-[#0A2640]">
+                Shop smarter, not harder.<br /><span class="text-[#FD273B]"
+                  >Get it ordered.</span
+                >
+              </p>
+              <p class="text-xl text-[#000000] mt-4">
+                Save time, skip the lines. We've got you covered.
+              </p>
+              <button
+                type="button"
+                class="bg-[#3CDA5F] text-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[10px] mt-12 py-2 px-5 font-medium text-lg"
+              >
+                ShopNow
+              </button>
+            </div>
+          </div>
+          <div class="my-14 relative">
+            <svg
+              width="520"
+              height="395"
+              viewBox="0 0 586 413"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M0 328.855C0 441.642 181.11 408.441 307.715 408.441C434.319 408.441 586 362.557 586 249.769C537.468 115.625 434.319 0 307.715 0C181.11 0 0 216.067 0 328.855Z"
+                fill="url(#paint0_linear_1_33)"
+              />
+              <path
+                d="M0 328.855C0 441.642 181.11 408.441 307.715 408.441C434.319 408.441 586 362.557 586 249.769C537.468 115.625 434.319 0 307.715 0C181.11 0 0 216.067 0 328.855Z"
+                fill="url(#pattern0_1_33)"
+                fill-opacity="0.05"
+              />
+              <defs>
+                <pattern
+                  id="pattern0_1_33"
+                  patternContentUnits="objectBoundingBox"
+                  width="0.204778"
+                  height="0.290557"
+                >
+                  <use
+                    xlink:href="#image0_1_33"
+                    transform="scale(0.00170648 0.00242131)"
+                  />
+                </pattern>
+                <linearGradient
+                  id="paint0_linear_1_33"
+                  x1="448.664"
+                  y1="52.0562"
+                  x2="38.8788"
+                  y2="411.47"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#2AD427" />
+                  <stop offset="1" stop-color="#3CDA5F" />
+                </linearGradient>
+                <image
+                  id="image0_1_33"
+                  width="120"
+                  height="120"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            <img
+              src="./images/main_front.png"
+              alt="main"
+              class="absolute -top-9 -rotate-[0.21]"
+              height="450px"
+              width="520px"
+            />
+            <div
+              class="flex items-center w-[439px] h-[95px] bg-[#F8F8F8] rounded-[15px] absolute top-[315px] left-[25px]"
+            >
+              <img src="./images/hero2.svg" alt="hero2" class="ps-6" />
+              <div class="px-8">
+                <p class="text-[15px] text-[#000000] font-medium">
+                  Ashely Daniels
+                </p>
+                <p class="text-[#777676]">
+                  "Saved me tons of time - never going back to grocery
+                  shopping!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <p class="text-lg font-semibold text-center py-4 text-[#0A2640]">
+            Trending Products
+          </p>
+          <img
+            src="./images/productSVG/eclipse.svg"
+            class="absolute left-[678px] top-[30px]"
+            alt="img"
+          />
+          <div class="flex justify-evenly w-[1135px] m-auto my-6">
+            <div>
+              <div
+                class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
+              >
+                <img src="images/productSVG/grocery.svg" alt="img" />
+              </div>
+              <p class="text-lg text-center">Grocery</p>
+            </div>
+            <div>
+              <div
+                class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
+              >
+                <img src="images/productSVG/shoes.svg" alt="img" />
+              </div>
+              <p class="text-lg text-center">Shoes</p>
+            </div>
+            <div>
+              <div
+                class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
+              >
+                <img src="images/productSVG/phones.svg" alt="img" />
+              </div>
+              <p class="text-lg text-center">Phones</p>
+            </div>
+            <div>
+              <div
+                class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
+              >
+                <img src="images/productSVG/google.svg" alt="img" />
+              </div>
+              <p class="text-lg text-center">Google Home</p>
+            </div>
+            <div>
+              <div
+                class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
+              >
+                <img src="images/productSVG/alarmClock.svg" alt="img" />
+              </div>
+              <p class="text-lg text-center">Alarm Clocks</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-6 m-8">
+          <div class="flex justify-center items-center pb-10">
+            <p class="text-2xl font-bold text-[#184363] mx-3">
+              Deal Of The Week
+            </p>
+            <div
+              class="h-[50px] w-[50px] bg-[#3CDA5F] rounded-[5px] px-2 mx-1 flex justify-center items-center"
+            >
+              <p
+                class="text-[#FFFFFF] font-medium text-lg text-center leading-[14px]"
+              >
+                10<span class="text-[10px] block">Days</span>
+              </p>
+            </div>
+            <div
+              class="h-[50px] w-[50px] bg-[#3CDA5F] rounded-[5px] px-2 mx-1 flex justify-center items-center"
+            >
+              <p
+                class="text-[#FFFFFF] font-medium text-lg text-center leading-[14px]"
+              >
+                19<span class="text-[10px] block">Hours</span>
+              </p>
+            </div>
+            <div
+              class="h-[50px] w-[50px] bg-[#3CDA5F] rounded-[5px] px-2 mx-1 flex justify-center items-center"
+            >
+              <p
+                class="text-[#FFFFFF] font-medium text-lg text-center leading-[14px]"
+              >
+                59<span class="text-[10px] block">Minutes</span>
+              </p>
+            </div>
+            <div
+              class="h-[50px] w-[50px] bg-[#3CDA5F] rounded-[5px] px-2 mx-1 flex justify-center items-center"
+            >
+              <p
+                class="text-[#FFFFFF] font-medium text-lg text-center leading-[14px]"
+              >
+                57<span class="text-[10px] block">seconds</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-evenly">
+            <div
+              class="w-[575px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] relative flex"
+            >
+              <div>
+                <img
+                  src="images/productDealsimages/perfume.png"
+                  alt="perfume"
+                  class="h-[303px] w-[303px] rounded-tl-[10px] rounded-bl-[10px]"
+                />
+                <div
+                  class="w-[40px] h-[20px] rounded-[16px] bg-[#39CB74] absolute top-2 left-2"
+                >
+                  <p class="text-[#FFFFFF] font-medium text-[12px] text-center">
+                    sale
+                  </p>
                 </div>
-                <div class="my-14 relative">
-                    <svg width="520" height="395" viewBox="0 0 586 413" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path d="M0 328.855C0 441.642 181.11 408.441 307.715 408.441C434.319 408.441 586 362.557 586 249.769C537.468 115.625 434.319 0 307.715 0C181.11 0 0 216.067 0 328.855Z" fill="url(#paint0_linear_1_33)"/>
-                        <path d="M0 328.855C0 441.642 181.11 408.441 307.715 408.441C434.319 408.441 586 362.557 586 249.769C537.468 115.625 434.319 0 307.715 0C181.11 0 0 216.067 0 328.855Z" fill="url(#pattern0_1_33)" fill-opacity="0.05"/>
-                        <defs>
-                        <pattern id="pattern0_1_33" patternContentUnits="objectBoundingBox" width="0.204778" height="0.290557">
-                        <use xlink:href="#image0_1_33" transform="scale(0.00170648 0.00242131)"/>
-                        </pattern>
-                        <linearGradient id="paint0_linear_1_33" x1="448.664" y1="52.0562" x2="38.8788" y2="411.47" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#2AD427"/>
-                        <stop offset="1" stop-color="#3CDA5F"/>
-                        </linearGradient>
-                        <image id="image0_1_33" width="120" height="120" xlink:href="data:image/png;base64,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"/>
-                        </defs>
+              </div>
+              <div class="p-7">
+                <p class="text-[20px] text-[#184363] font-medium leading-6">
+                  Elegant Perfumes
+                </p>
+                <p
+                  class="text-[20px] text-[#184363] font-medium leading-5 py-4"
+                >
+                  $16.00
+                </p>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Long Lasting</p>
+                </div>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Affordable price</p>
+                </div>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Best Perfume</p>
+                </div>
+                <button
+                  type="button"
+                  class="w-[180px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                >
+                  <div class="flex justify-evenly px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      />
                     </svg>
-                    <img src="./images/main_front.png" alt="main" class="absolute -top-9 -rotate-[0.21]" height="450px" width="520px">
-                    <div class="flex items-center w-[439px] h-[95px] bg-[#F8F8F8] rounded-[15px] absolute top-[315px] left-[25px]">
-                        <img src="./images/hero2.svg" alt="hero2" class="ps-6">
-                        <div class="px-8">
-                            <p class="text-[15px] text-[#000000] font-medium">Ashely Daniels</p>
-                            <p class="text-[#777676]">"Saved me tons of time - never going back to grocery shopping!"</p>
-                        </div>
-                    </div>
-                </div>
+                    <p>Buy Now</p>
+                  </div>
+                </button>
+              </div>
             </div>
 
-            <div class="relative">
-                <p class="text-lg font-[600] text-center py-4">Trending Products</p>
-                <img src="./images/productSVG/eclipse.svg" class="absolute left-[678px] top-[30px]" alt="img">
-                <div class="flex justify-evenly w-[1135px] m-auto my-6">
-                    <div>
-                        <div class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]">
-                            <img src="images/productSVG/grocery.svg" alt="img">
-                        </div>
-                        <p class="text-lg text-center">Grocery</p>
-                    </div>
-                    <div>
-                        <div class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]">
-                            <img src="images/productSVG/shoes.svg" alt="img">
-                        </div>
-                        <p class="text-lg text-center">Shoes</p>
-                    </div>
-                    <div>
-                        <div class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]">
-                            <img src="images/productSVG/phones.svg" alt="img">
-                        </div>
-                        <p class="text-lg text-center">Phones</p>
-                    </div>
-                    <div>
-                        <div class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]">
-                            <img src="images/productSVG/google.svg" alt="img">
-                        </div>
-                        <p class="text-lg text-center">Google Home</p>
-                    </div>
-                    <div>
-                        <div class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]">
-                            <img src="images/productSVG/alarmClock.svg" alt="img">
-                        </div>
-                        <p class="text-lg text-center">Alarm Clocks</p>
-                    </div>
+            <div
+              class="w-[575px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] flex"
+            >
+              <img
+                src="images/productDealsimages/strawberry.png"
+                alt="perfume"
+                class="h-[303px] w-[303px] rounded-tl-[10px] rounded-bl-[10px]"
+              />
+              <div class="p-7">
+                <p class="text-[20px] text-[#184363] font-medium leading-6">
+                  Strawberry Shampoo
+                </p>
+                <p
+                  class="text-[20px] text-[#184363] font-medium leading-5 py-4"
+                >
+                  $18.88
+                </p>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Allergy free</p>
                 </div>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Best Product</p>
+                </div>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#39CB74"
+                    class="w-[8px] h-[8px]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  <p class="px-2 leading-8 text-[13px]">Affordable price</p>
+                </div>
+                <button
+                  type="button"
+                  class="w-[180px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                >
+                  <div class="flex justify-evenly px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      />
+                    </svg>
+                    <p>Buy Now</p>
+                  </div>
+                </button>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div>
+          <p class="text-lg font-semibold text-center py-4 text-[#184363]">
+            Medical Products
+          </p>
+          <div class="flex justify-evenly px-4">
+            <div class="relative">
+              <img
+                src="images/productDealsimages/mask.png"
+                class="-rotate-180 w-[575px] h-[250px] rounded-[10px]"
+                alt="mask"
+              />
+              <div class="absolute top-12 left-12">
+                <div class="w-[82px] h-[20px] rounded-[10px] bg-[#F2971F]">
+                  <p class="font-normal text-[#FFFFFF] text-[12px] text-center">
+                    From $0.99
+                  </p>
+                </div>
+                <div class="w-[147px] h-[103px] mt-2">
+                  <p class="font-medium text-[28px] text-[#184363] leading-9">
+                    Breathable Face Mask
+                  </p>
+                </div>
+                <button
+                type="button"
+                class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
+              >
+              <div class="flex justify-center items-center">
+                  <p class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]">Shop now</p>
+                  <svg class="mt-1" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z" fill="white"/>
+                  </svg>
+              </div> 
+              </button>
+              </div>
+            </div>
+            <div class="relative">
+              <img
+                src="images/productDealsimages/medicalKit.png"
+                class="-rotate-180 w-[575px] h-[250px] rounded-[10px]"
+                alt="mask"
+              />
+              <div class="absolute top-12 left-12">
+                <div class="w-[82px] h-[20px] rounded-[10px] bg-[#F2971F]">
+                  <p class="font-normal text-[#FFFFFF] text-[12px] text-center">
+                    From $0.99
+                  </p>
+                </div>
+                <div class="w-[249px] h-[103px] mt-2">
+                  <p class="font-medium text-[28px] text-[#184363] leading-9">
+                    Medicine pack Get it now 45% Off
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
+                >
+                <div class="flex justify-center items-center">
+                    <p class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]">Shop now</p>
+                    <svg class="mt-1" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z" fill="white"/>
+                    </svg>
+                </div> 
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
