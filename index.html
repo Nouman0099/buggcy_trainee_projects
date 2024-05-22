@@ -12,13 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <title>Frontend Project</title>
   </head>
   <body class="bg-[#EDF4F6;]">
-    <header class="bg-[#FFFFFF] w-full">
+    <header class="bg-[#FFFFFF] w-full max-width">
       <div class="flex justify-around items-center">
         <p class="py-3 text-[28px] font-medium">
           Quick<span class="text-green-500">Pic</span>
@@ -87,9 +88,11 @@
       </div>
     </header>
 
-    <section class="flex space-x-3 mt-3 mb-2 ms-32 me-24">
+    <section
+      class="flex lg:space-x-3 md:space-x-1 mt-3 mb-2 ms-32 me-24 max-width1"
+    >
       <div
-        class="flex items-center justify-center space-x-2 w-[156px] h-[45px] rounded-[45px] bg-[#FFFFFF]"
+        class="flex items-center justify-center lg:space-x-2 w-[156px] h-[45px] rounded-[45px] bg-[#FFFFFF]"
       >
         <svg
           width="14"
@@ -97,6 +100,7 @@
           viewBox="0 0 13 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="lg:w-[14px] md:w-[11px] lg:h-[12px] md:h-[9px]"
         >
           <g clip-path="url(#clip0_1_171)">
             <path
@@ -115,7 +119,9 @@
             </clipPath>
           </defs>
         </svg>
-        <p class="text-center font-medium text-[#184363] text-[15px]">
+        <p
+          class="text-center font-medium text-[#184363] lg:text-[14px] md:text-[8px]"
+        >
           All Categories
         </p>
       </div>
@@ -146,22 +152,22 @@
       </div>
     </section>
 
-    <main>
+    <main class="max-width">
       <div class="bg-[#FFFFFF]">
         <div class="flex justify-around">
           <div class="pt-16 pb-14">
             <p
-              class="px-4 flex items-center w-[405px] h-[35px] text-[15px] bg-[#d7ffe0] text-[#0A2640] font-normal rounded-[30px]"
+              class="px-4 flex items-center lg:w-[405px] md:w-[330px] h-[35px] lg:text-[15px] md:text-[13px] bg-[#d7ffe0] text-[#0A2640] font-normal rounded-[30px]"
             >
               30% Off on groceries
             </p>
-            <div class="w-[513px] my-2">
-              <p class="text-7xl text-[#0A2640]">
-                Shop smarter, not harder.<br /><span class="text-[#FD273B]"
+            <div class="lg:w-[513px] md:w-[375px] my-2">
+              <p class="lg:text-7xl md:text-4xl text-[#0A2640] font-medium">
+                Shop smarter, not harder.<span class="text-[#FD273B]"
                   >Get it ordered.</span
                 >
               </p>
-              <p class="text-xl text-[#000000] mt-4">
+              <p class="lg:text-xl md:text-sm text-[#000000] mt-4">
                 Save time, skip the lines. We've got you covered.
               </p>
               <button
@@ -174,12 +180,11 @@
           </div>
           <div class="my-14 relative">
             <svg
-              width="520"
-              height="395"
               viewBox="0 0 586 413"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
+              class="lg:w-[520px] md:w-[375px] lg:h-[395px] md:h-[300px]"
             >
               <path
                 d="M0 328.855C0 441.642 181.11 408.441 307.715 408.441C434.319 408.441 586 362.557 586 249.769C537.468 115.625 434.319 0 307.715 0C181.11 0 0 216.067 0 328.855Z"
@@ -224,19 +229,19 @@
             <img
               src="./images/main_front.png"
               alt="main"
-              class="absolute -top-9 -rotate-[0.21]"
-              height="450px"
-              width="520px"
+              class="lg:w-[520px] md:w-[375px] lg:h-[450px] md:h-[290px] absolute -top-9 -rotate-[0.21]"
             />
             <div
-              class="flex items-center w-[439px] h-[95px] bg-[#F8F8F8] rounded-[15px] absolute top-[315px] left-[25px]"
+              class="flex items-center lg:w-[439px] md:w-[350px] lg:h-[95px] md:h-[70px] bg-[#F8F8F8] rounded-[15px] absolute lg:top-[325px] md:top-[250px] lg:left-[25px] md:left-[15px]"
             >
               <img src="./images/hero2.svg" alt="hero2" class="ps-6" />
-              <div class="px-8">
-                <p class="text-[15px] text-[#000000] font-medium">
+              <div class="lg:px-8 md:px-6">
+                <p
+                  class="lg:text-[15px] md:text-[13px] text-[#000000] font-medium"
+                >
                   Ashely Daniels
                 </p>
-                <p class="text-[#777676]">
+                <p class="text-[#777676] md:text-[12px]">
                   "Saved me tons of time - never going back to grocery
                   shopping!"
                 </p>
@@ -251,10 +256,10 @@
           </p>
           <img
             src="./images/productSVG/eclipse.svg"
-            class="absolute left-[678px] top-[30px]"
+            class="absolute lg:left-[678px] md:left-[430px] top-[30px]"
             alt="img"
           />
-          <div class="flex justify-evenly w-[1135px] m-auto my-6">
+          <div class="flex flex-wrap justify-evenly my-6">
             <div>
               <div
                 class="w-[175px] h-[180px] border-[0.8px] border-[#99F5AD] rounded-[15px]"
@@ -343,13 +348,13 @@
 
           <div class="flex justify-evenly">
             <div
-              class="w-[575px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] relative flex"
+              class="w-[575px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] relative flex lg:mr-0 md:mr-1"
             >
               <div>
                 <img
                   src="images/productDealsimages/perfume.png"
                   alt="perfume"
-                  class="h-[303px] w-[303px] rounded-tl-[10px] rounded-bl-[10px]"
+                  class="h-[303px] lg:w-[303px] md:w-[250px] rounded-tl-[10px] rounded-bl-[10px]"
                 />
                 <div
                   class="w-[40px] h-[20px] rounded-[16px] bg-[#39CB74] absolute top-2 left-2"
@@ -359,7 +364,7 @@
                   </p>
                 </div>
               </div>
-              <div class="p-7">
+              <div class="lg:p-7 md:p-4">
                 <p class="text-[20px] text-[#184363] font-medium leading-6">
                   Elegant Perfumes
                 </p>
@@ -421,7 +426,7 @@
                 </div>
                 <button
                   type="button"
-                  class="w-[180px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                  class="lg:w-[180px] md:w-[120px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
                 >
                   <div class="flex justify-evenly px-3">
                     <svg
@@ -445,14 +450,14 @@
             </div>
 
             <div
-              class="w-[575px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] flex"
+              class="lg:w-[575px] md:w-[550px] h-[305px] rounded-[10px] border-[1px] border-[#EAEAEA] flex lg:ml-0 md:ml-1"
             >
               <img
                 src="images/productDealsimages/strawberry.png"
                 alt="perfume"
-                class="h-[303px] w-[303px] rounded-tl-[10px] rounded-bl-[10px]"
+                class="h-[303px] lg:w-[303px] md:w-[250px] rounded-tl-[10px] rounded-bl-[10px]"
               />
-              <div class="p-7">
+              <div class="lg:p-7 md:p-4">
                 <p class="text-[20px] text-[#184363] font-medium leading-6">
                   Strawberry Shampoo
                 </p>
@@ -514,7 +519,7 @@
                 </div>
                 <button
                   type="button"
-                  class="w-[180px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                  class="lg:w-[180px] md:w-[120px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
                 >
                   <div class="flex justify-evenly px-3">
                     <svg
@@ -547,7 +552,7 @@
             <div class="relative">
               <img
                 src="images/productDealsimages/mask.png"
-                class="-rotate-180 w-[575px] h-[250px] rounded-[10px]"
+                class="-rotate-180 w-[575px] h-[250px] rounded-[10px] lg:mr-0 md:mr-1"
                 alt="mask"
               />
               <div class="absolute top-12 left-12">
@@ -562,22 +567,36 @@
                   </p>
                 </div>
                 <button
-                type="button"
-                class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
-              >
-              <div class="flex justify-center items-center">
-                  <p class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]">Shop now</p>
-                  <svg class="mt-1" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z" fill="white"/>
-                  </svg>
-              </div> 
-              </button>
+                  type="button"
+                  class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
+                >
+                  <div class="flex justify-center items-center">
+                    <p
+                      class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]"
+                    >
+                      Shop now
+                    </p>
+                    <svg
+                      class="mt-1"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
             <div class="relative">
               <img
                 src="images/productDealsimages/medicalKit.png"
-                class="-rotate-180 w-[575px] h-[250px] rounded-[10px]"
+                class="-rotate-180 w-[575px] h-[250px] rounded-[10px] lg:ml-0 md:ml-1"
                 alt="mask"
               />
               <div class="absolute top-12 left-12">
@@ -595,12 +614,198 @@
                   type="button"
                   class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
                 >
-                <div class="flex justify-center items-center">
-                    <p class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]">Shop now</p>
-                    <svg class="mt-1" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z" fill="white"/>
+                  <div class="flex justify-center items-center">
+                    <p
+                      class="pr-1 text-center text-[15px] font-medium text-[#FFFFFF]"
+                    >
+                      Shop now
+                    </p>
+                    <svg
+                      class="mt-1"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.22234 3.68784L2.66224 0.127804C2.5799 0.045398 2.46999 0 2.35278 0C2.23558 0 2.12566 0.045398 2.04332 0.127804L1.78115 0.389915C1.61055 0.560711 1.61055 0.838302 1.78115 1.00884L4.77065 3.99834L1.77783 6.99116C1.69549 7.07357 1.65002 7.18342 1.65002 7.30056C1.65002 7.41783 1.69549 7.52768 1.77783 7.61015L2.04 7.8722C2.12241 7.9546 2.23226 8 2.34947 8C2.46667 8 2.57659 7.9546 2.65893 7.8722L6.22234 4.30891C6.30488 4.22624 6.35021 4.11587 6.34995 3.99854C6.35021 3.88075 6.30488 3.77044 6.22234 3.68784Z"
+                        fill="white"
+                      />
                     </svg>
-                </div> 
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-around items-center py-14">
+          <img src="images/triangle.svg" alt="triangle" />
+          <div class="w-[513px] h-[273px] py-6">
+            <p class="lg:text-7xl md:text-6xl font-medium text-[#2A3136]">
+              Big city savings, delivered to your<span class="text-[#FD273B]">
+                doorstep.</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-center text-[24px] font-semibold text-[#184363] py-3">
+            Our Actions speaks louder than WORDS
+          </p>
+
+          <div id="testimonial" class="relative">
+            <p
+              class="p-12 m-12 w-[736px] h-[139px] text-[48px] text-[#184363] font-normal leading-[72px]"
+            >
+              Unlock the secrets of satisfied customers.
+            </p>
+
+            <div
+              class="w-[177px] h-[73px] flex justify-around absolute top-36 right-5"
+            >
+              <div
+                class="h-[56px] w-[58px] bg-[#FFFFFF] rounded-full flex justify-center items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#0A2640"
+                  class="w-6 h-6 font-extrabold"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                  />
+                </svg>
+              </div>
+              <div
+                class="h-[56px] w-[58px] bg-[#FFFFFF] rounded-full flex justify-center items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-wrap lg:justify-evenly md:justify-around p-9 lg:m-9"
+            >
+              <div
+                class="h-[338px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+              >
+                <p
+                  class="h-[180px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                >
+                  "Never going back to waiting in lines! Shop smarter, get it
+                  delivered with QuickPik. It's that simple."
+                </p>
+                <div class="w-[270px] h-[58px] flex mt-8">
+                  <img
+                    src="images/testimonialImages/manager1.svg"
+                    alt="manager"
+                  />
+                  <div class="px-2 py-1">
+                    <p class="font-medium text-[16px] text-[#184363]">
+                      Albus stella
+                    </p>
+                    <p
+                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                    >
+                      Manager @ Howarts
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="h-[374px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+              >
+                <p
+                  class="h-[215px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                >
+                  "Wide selection, even in my small town! Found everything I
+                  needed for my birthday party with just a few clicks. Thanks,
+                  QuickPik!"
+                </p>
+                <div class="w-[270px] h-[58px] flex mt-8">
+                  <img
+                    src="images/testimonialImages/manager2.svg"
+                    alt="manager"
+                  />
+                  <div class="px-2 py-1">
+                    <p class="font-medium text-[16px] text-[#184363]">
+                      Severus Snape
+                    </p>
+                    <p
+                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                    >
+                      Manager @ Slytherin
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="h-[338px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+              >
+                <p
+                  class="h-[180px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                >
+                  "Lifesaver for busy families! Fresh groceries delivered in a
+                  flash - dinner's on the table, thanks QuickPik!”
+                </p>
+                <div class="w-[270px] h-[58px] flex mt-8">
+                  <img
+                    src="images/testimonialImages/leader.svg"
+                    alt="manager"
+                  />
+                  <div class="px-2 py-1">
+                    <p class="font-medium text-[16px] text-[#184363]">
+                      Harry brige
+                    </p>
+                    <p
+                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                    >
+                      Team Leader @ Gryffindor
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div id="clients">
+            <div class="flex justify-around items-center">
+              <img src="./images/testimonialImages/clients.svg" alt="clients" />
+              <div class="w-[540px] h-[210px] mt-5">
+                <p
+                  class="font-semibold text-[42px] leading-[53px] text-[#0A2640]"
+                >
+                  SignUp For Exclusive Offers And Discounts
+                </p>
+                <button
+                  type="button"
+                  class="w-[250px] h-[62px] px-[22px] py-[18px] bg-[#3CDA5F] rounded-[8px] mt-11"
+                >
+                  <p class="text-[20px] font-medium text-[#FBFBFB]">Sign Up</p>
                 </button>
               </div>
             </div>
@@ -608,5 +813,9 @@
         </div>
       </div>
     </main>
+
+    <footer class="mt-12 max-width">
+      <img src="images/footer.svg" alt="footer" />
+    </footer>
   </body>
 </html>
