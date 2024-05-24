@@ -15,52 +15,97 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
     <title>Frontend Project</title>
   </head>
-  <body class="bg-[#EDF4F6;]">
+  <body class="bg-[#EDF4F6]">
     <header class="bg-[#FFFFFF] w-full max-width">
-      <div class="flex justify-around items-center sm:space-x-0 space-x-56">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 font-bold md:hidden">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-        <p class="py-3 text-[28px] font-medium">
+      <div class="flex justify-around items-center">
+        <ion-icon
+          name="menu"
+          onclick="toggleMenuFunction(this)"
+          class="md:hidden text-3xl"
+        ></ion-icon>
+        <p class="py-3 text-[28px] font-medium sm:ml-0 ml-44">
           Quick<span class="text-green-500">Pic</span>
         </p>
-        <nav class="md:block hidden">
-          <ul class="flex space-x-6">
+        <nav>
+          <ul
+            class="md:flex md:space-x-6 md:static absolute left-0 top-[-400px] md:w-auto w-full md:bg-[#FFFFFF] bg-[#EDF4F6] md:pl-0 pl-7 md:py-0 py-5 md:space-y-0 space-y-4 md:z-auto z-10 md:transition-none transition-all ease-in duration-500"
+          >
             <li>
-              <a class="text-base font-medium text-[#0A2640]" href="">Home</a>
+              <a
+                class="md:text-base text-2xl font-medium text-[#0A2640]"
+                href=""
+                >Home</a
+              >
             </li>
             <li>
-              <a class="text-base font-medium text-[#0A2640]" href=""
+              <a
+                class="md:text-base text-2xl font-medium text-[#0A2640]"
+                href=""
                 >About us</a
               >
             </li>
             <li>
-              <a class="text-base font-medium text-[#0A2640]" href=""
+              <a
+                class="md:text-base text-2xl font-medium text-[#0A2640]"
+                href=""
                 >Products</a
               >
             </li>
             <li>
-              <a class="text-base font-medium text-[#0A2640]" href=""
+              <a
+                class="md:text-base text-2xl font-medium text-[#0A2640]"
+                href=""
                 >Services</a
               >
             </li>
             <li>
-              <a class="text-base font-medium text-[#0A2640]" href=""
+              <a
+                class="md:text-base text-2xl font-medium text-[#0A2640]"
+                href=""
                 >Contact us</a
               >
             </li>
           </ul>
         </nav>
         <div class="sm:flex space-x-4 items-center hidden">
-          <button
-            type="button"
-            class="bg-[#3CDA5F] text-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[10px] py-2 px-5 font-medium text-lg"
+          <svg
+            width="154"
+            height="45"
+            viewBox="0 0 154 45"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            ShopNow
-          </button>
+            <rect x="1" y="1" width="152" height="43" rx="9" fill="#3CDA5F" />
+            <rect
+              x="1"
+              y="1"
+              width="152"
+              height="43"
+              rx="9"
+              stroke="url(#paint0_linear_5_164)"
+              stroke-width="2"
+            />
+            <path
+              d="M39.42 30.2C38.3133 30.2 37.3733 30 36.6 29.6C35.8267 29.2 35.1333 28.6133 34.52 27.84L36.08 26.28C36.4667 26.84 36.9267 27.28 37.46 27.6C37.9933 27.9067 38.6733 28.06 39.5 28.06C40.2733 28.06 40.8867 27.9 41.34 27.58C41.8067 27.26 42.04 26.82 42.04 26.26C42.04 25.7933 41.92 25.4133 41.68 25.12C41.44 24.8267 41.12 24.5867 40.72 24.4C40.3333 24.2 39.9 24.0267 39.42 23.88C38.9533 23.72 38.48 23.5467 38 23.36C37.5333 23.16 37.1 22.9133 36.7 22.62C36.3133 22.3267 36 21.9467 35.76 21.48C35.52 21.0133 35.4 20.42 35.4 19.7C35.4 18.8733 35.6 18.1733 36 17.6C36.4133 17.0133 36.9667 16.5667 37.66 16.26C38.3533 15.9533 39.1267 15.8 39.98 15.8C40.9 15.8 41.72 15.98 42.44 16.34C43.1733 16.7 43.7667 17.16 44.22 17.72L42.66 19.28C42.26 18.8267 41.84 18.4933 41.4 18.28C40.9733 18.0533 40.48 17.94 39.92 17.94C39.2267 17.94 38.68 18.08 38.28 18.36C37.8933 18.64 37.7 19.0333 37.7 19.54C37.7 19.9667 37.82 20.3133 38.06 20.58C38.3 20.8333 38.6133 21.0533 39 21.24C39.4 21.4133 39.8333 21.58 40.3 21.74C40.78 21.9 41.2533 22.08 41.72 22.28C42.2 22.48 42.6333 22.74 43.02 23.06C43.42 23.3667 43.74 23.7667 43.98 24.26C44.22 24.7533 44.34 25.3733 44.34 26.12C44.34 27.3733 43.8933 28.3667 43 29.1C42.12 29.8333 40.9267 30.2 39.42 30.2ZM52.9133 30V24.46C52.9133 23.82 52.7066 23.2933 52.2933 22.88C51.8933 22.4667 51.3733 22.26 50.7333 22.26C50.3066 22.26 49.9266 22.3533 49.5933 22.54C49.2599 22.7267 48.9999 22.9867 48.8133 23.32C48.6266 23.6533 48.5333 24.0333 48.5333 24.46L47.6733 23.98C47.6733 23.2467 47.8333 22.6 48.1533 22.04C48.4733 21.4667 48.9133 21.02 49.4733 20.7C50.0466 20.3667 50.6866 20.2 51.3933 20.2C52.1133 20.2 52.7533 20.36 53.3133 20.68C53.8733 21 54.3133 21.4467 54.6333 22.02C54.9533 22.58 55.1133 23.2333 55.1133 23.98V30H52.9133ZM46.3333 30V15.6H48.5333V30H46.3333ZM61.7489 30.2C60.8156 30.2 59.9689 29.98 59.2089 29.54C58.4489 29.0867 57.8422 28.48 57.3889 27.72C56.9489 26.96 56.7289 26.1133 56.7289 25.18C56.7289 24.2467 56.9489 23.4067 57.3889 22.66C57.8422 21.9133 58.4489 21.32 59.2089 20.88C59.9689 20.4267 60.8156 20.2 61.7489 20.2C62.6956 20.2 63.5489 20.42 64.3089 20.86C65.0689 21.3 65.6689 21.9 66.1089 22.66C66.5622 23.4067 66.7889 24.2467 66.7889 25.18C66.7889 26.1133 66.5622 26.96 66.1089 27.72C65.6689 28.48 65.0689 29.0867 64.3089 29.54C63.5489 29.98 62.6956 30.2 61.7489 30.2ZM61.7489 28.08C62.2956 28.08 62.7756 27.96 63.1889 27.72C63.6156 27.4667 63.9422 27.12 64.1689 26.68C64.4089 26.24 64.5289 25.74 64.5289 25.18C64.5289 24.62 64.4089 24.1267 64.1689 23.7C63.9289 23.2733 63.6022 22.94 63.1889 22.7C62.7756 22.4467 62.2956 22.32 61.7489 22.32C61.2156 22.32 60.7356 22.4467 60.3089 22.7C59.8956 22.94 59.5689 23.2733 59.3289 23.7C59.1022 24.1267 58.9889 24.62 58.9889 25.18C58.9889 25.74 59.1022 26.24 59.3289 26.68C59.5689 27.12 59.8956 27.4667 60.3089 27.72C60.7356 27.96 61.2156 28.08 61.7489 28.08ZM73.7584 30.2C73.0251 30.2 72.3718 30.0467 71.7984 29.74C71.2251 29.42 70.7718 28.9867 70.4384 28.44C70.1184 27.8933 69.9584 27.2733 69.9584 26.58V23.82C69.9584 23.1267 70.1251 22.5067 70.4584 21.96C70.7918 21.4133 71.2451 20.9867 71.8184 20.68C72.3918 20.36 73.0384 20.2 73.7584 20.2C74.6251 20.2 75.4051 20.4267 76.0984 20.88C76.8051 21.32 77.3584 21.92 77.7584 22.68C78.1718 23.4267 78.3784 24.2733 78.3784 25.22C78.3784 26.1533 78.1718 27 77.7584 27.76C77.3584 28.5067 76.8051 29.1 76.0984 29.54C75.4051 29.98 74.6251 30.2 73.7584 30.2ZM73.3984 28.12C73.9318 28.12 74.3984 28 74.7984 27.76C75.2118 27.5067 75.5318 27.16 75.7584 26.72C75.9984 26.28 76.1184 25.7733 76.1184 25.2C76.1184 24.6267 75.9984 24.12 75.7584 23.68C75.5318 23.24 75.2118 22.9 74.7984 22.66C74.3984 22.4067 73.9318 22.28 73.3984 22.28C72.8651 22.28 72.3918 22.4067 71.9784 22.66C71.5651 22.9 71.2451 23.24 71.0184 23.68C70.7918 24.12 70.6784 24.6267 70.6784 25.2C70.6784 25.7733 70.7918 26.28 71.0184 26.72C71.2451 27.16 71.5651 27.5067 71.9784 27.76C72.3918 28 72.8651 28.12 73.3984 28.12ZM68.6184 34V20.4H70.8184V22.98L70.4384 25.32L70.8184 27.64V34H68.6184ZM80.52 30V16H82.12L82.82 18.64V30H80.52ZM90.22 30L81.84 19.06L82.12 16L90.5 26.94L90.22 30ZM90.22 30L89.52 27.54V16H91.82V30H90.22ZM98.9559 30.2C98.0226 30.2 97.1759 29.98 96.4159 29.54C95.6559 29.0867 95.0493 28.48 94.5959 27.72C94.1559 26.96 93.9359 26.1133 93.9359 25.18C93.9359 24.2467 94.1559 23.4067 94.5959 22.66C95.0493 21.9133 95.6559 21.32 96.4159 20.88C97.1759 20.4267 98.0226 20.2 98.9559 20.2C99.9026 20.2 100.756 20.42 101.516 20.86C102.276 21.3 102.876 21.9 103.316 22.66C103.769 23.4067 103.996 24.2467 103.996 25.18C103.996 26.1133 103.769 26.96 103.316 27.72C102.876 28.48 102.276 29.0867 101.516 29.54C100.756 29.98 99.9026 30.2 98.9559 30.2ZM98.9559 28.08C99.5026 28.08 99.9826 27.96 100.396 27.72C100.823 27.4667 101.149 27.12 101.376 26.68C101.616 26.24 101.736 25.74 101.736 25.18C101.736 24.62 101.616 24.1267 101.376 23.7C101.136 23.2733 100.809 22.94 100.396 22.7C99.9826 22.4467 99.5026 22.32 98.9559 22.32C98.4226 22.32 97.9426 22.4467 97.5159 22.7C97.1026 22.94 96.7759 23.2733 96.5359 23.7C96.3093 24.1267 96.1959 24.62 96.1959 25.18C96.1959 25.74 96.3093 26.24 96.5359 26.68C96.7759 27.12 97.1026 27.4667 97.5159 27.72C97.9426 27.96 98.4226 28.08 98.9559 28.08ZM108.391 30L104.531 20.4H106.811L109.411 27.38L108.731 27.4L111.271 20.4H112.551L115.091 27.4L114.411 27.38L117.011 20.4H119.291L115.431 30H114.151L111.551 23.36H112.271L109.671 30H108.391Z"
+              fill="white"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_5_164"
+                x1="0"
+                y1="22.5"
+                x2="154"
+                y2="22.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#999999" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+
           <svg
             width="24"
             height="24"
@@ -88,7 +133,6 @@
             />
           </svg>
         </div>
-        
       </div>
     </header>
 
@@ -132,7 +176,7 @@
       <div
         class="items-center flex ps-3 md:mt-0 mt-3 justify-between w-[985px] h-[47px] rounded-[45px] bg-[#FFFFFF]"
       >
-        <p class="font-medium md:text-sm text-[0.7rem]  text-[#184363]">
+        <p class="font-medium md:text-sm text-[0.7rem] text-[#184363]">
           What are you looking for?
         </p>
         <div
@@ -159,7 +203,9 @@
     <main class="max-width">
       <div class="bg-[#FFFFFF]">
         <div class="flex justify-around md:flex-nowrap flex-wrap">
-          <div class="md:pt-16 pt-12 md:pb-14 pb-10 md:pl-4 pl-2 sm:order-1 order-2">
+          <div
+            class="md:pt-16 pt-12 md:pb-14 pb-10 md:pl-4 pl-2 sm:order-1 order-2"
+          >
             <p
               class="md:px-4 px-2 flex items-center lg:w-[405px] md:w-[330px] h-[35px] lg:text-[15px] md:text-[13px] bg-[#d7ffe0] text-[#0A2640] font-normal rounded-[30px]"
             >
@@ -182,7 +228,7 @@
               </button>
             </div>
           </div>
-          
+
           <div class="md:my-14 mt-11 mb-4 relative sm:order-2 order-1">
             <svg
               viewBox="0 0 586 413"
@@ -252,7 +298,6 @@
                 </p>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -260,11 +305,6 @@
           <p class="text-lg font-semibold text-center py-4 text-[#0A2640]">
             Trending Products
           </p>
-          <img
-            src="./images/productSVG/eclipse.svg"
-            class="absolute lg:left-[560px] md:left-[430px] left-[250px] top-[30px]"
-            alt="img"
-          />
           <div class="flex flex-wrap justify-evenly my-6">
             <div>
               <div
@@ -363,19 +403,19 @@
                   class="h-[303px] lg:w-[303px] md:w-[250px] rounded-tl-[10px] rounded-bl-[10px]"
                 />
                 <div
-                  class="w-[40px] h-[20px] rounded-[16px] bg-[#39CB74] absolute top-2 left-2"
+                  class="w-10 h-5 rounded-2xl bg-[#39CB74] absolute top-2 left-2"
                 >
-                  <p class="text-[#FFFFFF] font-medium text-[12px] text-center">
+                  <p class="text-[#FFFFFF] font-medium text-xs text-center">
                     sale
                   </p>
                 </div>
               </div>
-              <div class="lg:p-7 md:p-4">
-                <p class="text-[20px] text-[#184363] font-medium leading-6">
+              <div class="lg:p-7 md:p-4 sm:p-7">
+                <p class="text-xl text-[#184363] font-medium leading-6">
                   Elegant Perfumes
                 </p>
                 <p
-                  class="text-[20px] text-[#184363] font-medium leading-5 py-4"
+                  class="text-xl text-[#184363] font-medium leading-5 py-4"
                 >
                   $16.00
                 </p>
@@ -386,7 +426,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -403,7 +443,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -420,7 +460,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -432,7 +472,7 @@
                 </div>
                 <button
                   type="button"
-                  class="lg:w-[180px] md:w-[120px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                  class="lg:w-[180px] md:w-[120px] h-10 rounded-[72px] bg-[#EDF4F6] mt-6"
                 >
                   <div class="flex justify-evenly px-3">
                     <svg
@@ -463,12 +503,12 @@
                 alt="perfume"
                 class="h-[303px] lg:w-[303px] md:w-[250px] w-[250px] rounded-tl-[10px] rounded-bl-[10px]"
               />
-              <div class="lg:p-7 md:p-4">
-                <p class="text-[20px] text-[#184363] font-medium leading-6">
+              <div class="lg:p-7 md:p-4 sm:p-7">
+                <p class="text-xl text-[#184363] font-medium leading-6">
                   Strawberry Shampoo
                 </p>
                 <p
-                  class="text-[20px] text-[#184363] font-medium leading-5 py-4"
+                  class="text-xl text-[#184363] font-medium leading-5 py-4"
                 >
                   $18.88
                 </p>
@@ -479,7 +519,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -496,7 +536,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -513,7 +553,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="#39CB74"
-                    class="w-[8px] h-[8px]"
+                    class="w-2 h-2"
                   >
                     <path
                       stroke-linecap="round"
@@ -525,7 +565,7 @@
                 </div>
                 <button
                   type="button"
-                  class="lg:w-[180px] md:w-[120px] h-[40px] rounded-[72px] bg-[#EDF4F6] mt-6"
+                  class="lg:w-[180px] md:w-[120px] h-10 rounded-[72px] bg-[#EDF4F6] mt-6"
                 >
                   <div class="flex justify-evenly px-3">
                     <svg
@@ -562,7 +602,7 @@
                 alt="mask"
               />
               <div class="absolute top-12 left-12">
-                <div class="w-[82px] h-[20px] rounded-[10px] bg-[#F2971F]">
+                <div class="w-[82px] h-5 rounded-[10px] bg-[#F2971F]">
                   <p class="font-normal text-[#FFFFFF] text-[12px] text-center">
                     From $0.99
                   </p>
@@ -574,7 +614,7 @@
                 </div>
                 <button
                   type="button"
-                  class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
+                  class="w-[109px] h-10 rounded-[72px] bg-[#184363]"
                 >
                   <div class="flex justify-center items-center">
                     <p
@@ -606,7 +646,7 @@
                 alt="mask"
               />
               <div class="absolute top-12 left-12">
-                <div class="w-[82px] h-[20px] rounded-[10px] bg-[#F2971F]">
+                <div class="w-[82px] h-5 rounded-[10px] bg-[#F2971F]">
                   <p class="font-normal text-[#FFFFFF] text-[12px] text-center">
                     From $0.99
                   </p>
@@ -618,7 +658,7 @@
                 </div>
                 <button
                   type="button"
-                  class="w-[109px] h-[40px] rounded-[72px] bg-[#184363]"
+                  class="w-[109px] h-10 rounded-[72px] bg-[#184363]"
                 >
                   <div class="flex justify-center items-center">
                     <p
@@ -646,13 +686,22 @@
           </div>
         </div>
 
-        <div class="flex md:flex-nowrap flex-wrap justify-around items-center md:py-14">
-          <svg class="lg:w-[478px] md:w-[400px] w-[300px] lg:h-[370px] md:h-[310px] h-[270px]"  viewBox="0 0 479 372" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M239.5 0L478.09 372H0.910004L239.5 0Z" fill="#B1F9C6"/>
+        <div
+          class="flex sm:flex-nowrap flex-wrap justify-around items-center md:py-14"
+        >
+          <svg
+            class="lg:w-[478px] md:w-[400px] w-[300px] lg:h-[370px] md:h-[310px] h-[270px] md:-pl-0 sm:pl-6"
+            viewBox="0 0 479 372"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M239.5 0L478.09 372H0.910004L239.5 0Z" fill="#B1F9C6" />
           </svg>
-            
+
           <div class="w-[513px] md:h-[273px] h-[173px] py-6 md:px-0 px-14">
-            <p class="lg:text-7xl md:text-6xl text-4xl font-medium text-[#2A3136]">
+            <p
+              class="lg:text-7xl md:text-6xl text-4xl font-medium text-[#2A3136]"
+            >
               Big city savings, delivered to your<span class="text-[#FD273B]">
                 doorstep.</span
               >
@@ -661,22 +710,24 @@
         </div>
 
         <div>
-          <p class="text-center md:text-[24px] text-[19px] font-semibold text-[#184363] py-3">
+          <p
+            class="text-center md:text-2xl text-[19px] font-semibold text-[#184363] py-3"
+          >
             Our Actions speaks louder than WORDS
           </p>
 
           <div id="testimonial" class="relative">
             <p
-              class="md:p-12 p-6 md:m-12 m-6 md:w-[736px] w-[370px] md:h-[139px] h-[40px] md:text-[48px] text-[28px] text-[#184363] font-normal md:leading-[72px] leading-8"
+              class="md:p-12 p-6 md:m-12 m-6 md:w-[736px] w-[370px] md:h-[139px] h-10 md:text-5xl text-[28px] text-[#184363] font-normal md:leading-[72px] leading-8"
             >
               Unlock the secrets of satisfied customers.
             </p>
 
             <div
-              class="md:w-[177px] w-[120px] md:h-[73px] h-[50px] flex justify-around absolute md:top-36 top-24 right-5 "
+              class="md:w-[177px] w-[120px] md:h-[73px] h-[50px] flex justify-around absolute md:top-36 top-24 right-5"
             >
               <div
-                class="md:h-[56px] h-[46px] md:w-[58px] w-[48px] bg-[#FFFFFF] rounded-full flex justify-center items-center"
+                class="md:h-14 h-[46px] md:w-[58px] w-12 bg-[#FFFFFF] rounded-full flex justify-center items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -694,7 +745,7 @@
                 </svg>
               </div>
               <div
-                class="md:h-[56px] h-[46px] md:w-[58px] w-[48px] bg-[#FFFFFF] rounded-full flex justify-center items-center"
+                class="md:h-14 h-[46px] md:w-[58px] w-12 bg-[#FFFFFF] rounded-full flex justify-center items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -714,13 +765,13 @@
             </div>
 
             <div
-              class="flex flex-wrap lg:justify-evenly md:justify-around p-9 md:pl-0 pl-8  lg:m-9 md:mt-0 mt-20"
+              class="flex flex-wrap lg:justify-evenly md:justify-around p-9 md:pl-0 pl-8 lg:m-9 md:mt-0 mt-20"
             >
               <div
-                class="mb-4 h-[338px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+                class="mb-4 h-[338px] w-[330px] bg-[#FFFFFF] p-10 rounded-xl boxShadow"
               >
                 <p
-                  class="h-[180px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                  class="h-[180px] w-[270px] text-2xl leading-9 text-[#000000]"
                 >
                   "Never going back to waiting in lines! Shop smarter, get it
                   delivered with QuickPik. It's that simple."
@@ -731,11 +782,11 @@
                     alt="manager"
                   />
                   <div class="px-2 py-1">
-                    <p class="font-medium text-[16px] text-[#184363]">
+                    <p class="font-medium text-base text-[#184363]">
                       Albus stella
                     </p>
                     <p
-                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                      class="font-normal text-sm text-[#184363] fontFamily"
                     >
                       Manager @ Howarts
                     </p>
@@ -744,10 +795,10 @@
               </div>
 
               <div
-                class="md:mb-8 mb-4 h-[374px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+                class="md:mb-8 mb-4 h-[374px] w-[330px] bg-[#FFFFFF] p-10 rounded-xl boxShadow"
               >
                 <p
-                  class="h-[215px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                  class="h-[215px] w-[270px] text-2xl leading-9 text-[#000000]"
                 >
                   "Wide selection, even in my small town! Found everything I
                   needed for my birthday party with just a few clicks. Thanks,
@@ -759,11 +810,11 @@
                     alt="manager"
                   />
                   <div class="px-2 py-1">
-                    <p class="font-medium text-[16px] text-[#184363]">
+                    <p class="font-medium text-base text-[#184363]">
                       Severus Snape
                     </p>
                     <p
-                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                      class="font-normal text-sm text-[#184363] fontFamily"
                     >
                       Manager @ Slytherin
                     </p>
@@ -771,10 +822,10 @@
                 </div>
               </div>
               <div
-                class="mb-4 h-[338px] w-[330px] bg-[#FFFFFF] p-[40px] rounded-[12px] boxShadow"
+                class="mb-4 h-[338px] w-[330px] bg-[#FFFFFF] p-10 rounded-xl boxShadow"
               >
                 <p
-                  class="h-[180px] w-[270px] text-[24px] leading-[36px] text-[#000000]"
+                  class="h-[180px] w-[270px] text-2xl leading-9 text-[#000000]"
                 >
                   "Lifesaver for busy families! Fresh groceries delivered in a
                   flash - dinner's on the table, thanks QuickPik!”
@@ -785,11 +836,11 @@
                     alt="manager"
                   />
                   <div class="px-2 py-1">
-                    <p class="font-medium text-[16px] text-[#184363]">
+                    <p class="font-medium text-base text-[#184363]">
                       Harry brige
                     </p>
                     <p
-                      class="font-normal text-[14px] text-[#184363] fontFamily"
+                      class="font-normal text-sm text-[#184363] fontFamily"
                     >
                       Team Leader @ Gryffindor
                     </p>
@@ -802,19 +853,25 @@
 
         <div>
           <div id="clients">
-            <div class="flex justify-around items-center md:flex-nowrap flex-wrap">
+            <div
+              class="flex justify-around items-center md:flex-nowrap flex-wrap"
+            >
               <img src="./images/testimonialImages/clients.svg" alt="clients" />
               <div class="w-[540px] h-[210px] mt-5">
                 <p
-                  class="font-semibold md:text-[42px] text-[30px] md:leading-[53px] leading-12 md:px-0 px-11 text-[#0A2640]"
+                  class="font-semibold md:text-[42px] text-3xl md:leading-[53px] leading-12 md:px-0 px-11 text-[#0A2640]"
                 >
                   SignUp For Exclusive Offers And Discounts
                 </p>
                 <button
                   type="button"
-                  class="md:w-[250px] w-[180px] md:h-[62px] h-[50px] md:px-[22px] px-[17px] md:py-[18px] py-[12px] bg-[#3CDA5F] rounded-[8px] md:mt-11 mt-6 md:ml-0 ml-[106px]"
+                  class="md:w-[250px] w-[180px] md:h-[62px] h-[50px] md:px-[22px] px-[17px] md:py-[18px] py-3 bg-[#3CDA5F] rounded-lg md:mt-11 mt-6 md:ml-0 ml-[106px]"
                 >
-                  <p class="md:text-[20px] text-[18px] font-medium text-[#FBFBFB]">Sign Up</p>
+                  <p
+                    class="md:text-xl text-lg font-medium text-[#FBFBFB]"
+                  >
+                    Sign Up
+                  </p>
                 </button>
               </div>
             </div>
@@ -826,5 +883,23 @@
     <footer class="max-width pt-7">
       <img src="images/footer.svg" alt="footer" />
     </footer>
+
+    <script>
+      function toggleMenuFunction(e) {
+        let menubar = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"), menubar.classList.add("top-[80px]"))
+          : ((e.name = "menu"), menubar.classList.remove("top-[80px]"));
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
